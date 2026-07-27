@@ -56,6 +56,7 @@
     cmatrix
     awww
     wlsunset
+    pavucontrol
     sound-theme-freedesktop
     starship
     whitesur-icon-theme  
