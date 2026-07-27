@@ -2,7 +2,7 @@
 {
   imports = [
     ./packages.nix
-    ./waybar.nix
+    ./link.nix
     ./shell.nix
     ./starship.nix
     ./git.nix

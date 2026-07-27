@@ -39,6 +39,7 @@
     vscode
     obsidian
     fuzzel
+    libnotify
     audacious
     mpv
     viewnior
@@ -55,6 +56,7 @@
     cmatrix
     awww
     wlsunset
+    sound-theme-freedesktop
     starship
     whitesur-icon-theme  
     whitesur-gtk-theme
