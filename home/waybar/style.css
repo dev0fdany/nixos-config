@@ -1,10 +1,10 @@
 /* Import the Matugen colors */
 @import url("./colors.css");
 
-/* Map your old variables to the dynamic Matugen tokens */
+/* Map variables to Matugen tokens */
 @define-color background @matugen-background;
 @define-color foreground @matugen-foreground;
-@define-color accent     @matugen-accent;
+@define-color accent @matugen-accent;
 
 * {
   border: none;
@@ -12,7 +12,7 @@
   font-family: "JetBrains Mono Nerd Font";
 }
 
-window#waybar  {
+window#waybar {
   background-color: @background;
 }
 
@@ -28,9 +28,9 @@ window#waybar  {
 }
 
 #workspaces {
-    margin: 0px 4px;
-    padding: 0px 0px;
-    padding-top: 2px;
+  margin: 0px 4px;
+  padding: 0px 0px;
+  padding-top: 2px;
 }
 
 #workspaces button {
@@ -55,11 +55,11 @@ window#waybar  {
 
 #workspaces button.empty:hover, 
 #workspaces button:hover {
-    background: transparent;
-    color: alpha(@foreground, 0.75);
-    opacity: 0.75;
-    font-weight: bold;
-    font-size: 14px;
+  background: transparent;
+  color: alpha(@foreground, 0.75);
+  opacity: 0.75;
+  font-weight: bold;
+  font-size: 14px;
 }
 
 #workspaces button.empty {
@@ -134,9 +134,9 @@ tooltip {
 }
 
 @keyframes blink {
-    to {
-        color: @matugen-dim;
-    }
+  to {
+    color: @matugen-dim;
+  }
 }
 
 @keyframes blink2 {
@@ -158,41 +158,62 @@ tooltip {
 
 #memory.warning,
 #cpu.warning {
-    color: @matugen-warn;
+  color: @matugen-warn;
 }
 
 #memory.critical,
 #cpu.critical {
-    color: @accent;
+  color: @accent;
 }
 
 /* ========================================================================= */
-/* CSS TARGET CORES: Style text components using your dynamic Matugen accents*/
+/* CSS TARGET CORES: Style text components using dynamic Matugen accents     */
 /* ========================================================================= */
-
+/* Power, Bluetooth, Network, Pulseaudio, and Battery bold text */
 #network label b,
+#network b,
 #bluetooth label b,
+#bluetooth b,
 #power-profiles-daemon label b,
-#pulseaudio label b {
+#power-profiles-daemon b,
+#pulseaudio label b,
+#pulseaudio b,
+#battery label b,
+#battery b {
   font-style: italic;
   font-weight: 900;
-  color: @accent !important;
+  color: @accent;
 }
 
-#battery label b {
-  font-style: italic;
-  font-weight: 900;
-  color: @accent !important;
+/* Specific styling for the battery module label */
+#battery label b,
+#battery b {
   border-bottom: 2px solid @accent;
 }
 
-#battery label small {
+#battery label small,
+#battery small {
   font-style: italic;
   font-weight: 900;
-  color: @accent !important;
+  color: @accent;
 }
 
-calendar label b { color: @matugen-accent; font-weight: bold; }
-calendar label i { color: @matugen-dim; font-style: italic; }
-calendar label small { color: @matugen-warn; }
+/* Calendar styling in clock tooltip */
+calendar {
+  background-color: @background;
+  color: @foreground;
+}
 
+calendar label b {
+  color: @matugen-accent;
+  font-weight: bold;
+}
+
+calendar label i {
+  color: @matugen-dim;
+  font-style: italic;
+}
+
+calendar label small {
+  color: @matugen-warn;
+}

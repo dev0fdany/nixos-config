@@ -30,18 +30,18 @@
     "cursor": true,
     "format": "{icon}",
     "format-icons": {
-  "1": "1",
-  "2": "2",
-  "3": "3",
-  "4": "4",
-  "5": "5",
-  "6": "6",
-  "7": "7",
-  "8": "8",
-  "9": "9",
-  "10": "10"
-},
-  "persistent-workspaces": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "10"
+    },
+    "persistent-workspaces": {
       "1": [],
       "2": [],
       "3": [],
@@ -53,20 +53,20 @@
       "9": [],
       "10": []
     }
-},
-"custom/separator": {
+  },
+  "custom/separator": {
     "format": "󰇙", 
     "tooltip": false
-},
-    "power-profiles-daemon": {
+  },
+  "power-profiles-daemon": {
     "justify": "center",
     "format": "power {icon}",
     "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
     "tooltip": true,
     "format-icons": {
-      "performance": "<span style='italic' weight='900' color='#df6124'>performance</span>",
-      "balanced": "<span style='italic' weight='900' color='#df6124'>balanced</span>",
-      "power-saver": "<span style='italic' weight='900' color='#df6124'>saver</span>"
+      "performance": "<b>performance</b>",
+      "balanced": "<b>balanced</b>",
+      "power-saver": "<b>saver</b>"
     }
   },
   "cpu": {
@@ -74,30 +74,30 @@
     "format": "cpu {usage:02}%",
     "on-click": "btop",
     "states": {
-        "warning": 50,
-        "critical": 80
+      "warning": 50,
+      "critical": 80
     }
   },
   "backlight": {
-        "device": "intel_backlight",
-        "rotate": 0,
-        "format": "bl {percent}%",
-        "tooltip-format": "🌕 {percent}%",
-            "format-icons": [
+    "device": "intel_backlight",
+    "rotate": 0,
+    "format": "bl {percent}%",
+    "tooltip-format": "🌕 {percent}%",
+    "format-icons": [
       "󰃜",
       "󰃝",
       "󰃞",
       "󰃟",
       "󰃠"
     ]
-   },
+  },
   "memory": {
     "interval": 2,
     "format": "mem {percentage:02}%",
     "on-click": "btop",
-       "states": {
-        "warning": 50,
-        "critical": 80
+    "states": {
+      "warning": 50,
+      "critical": 80
     }
   },
   "clock": {
@@ -110,10 +110,10 @@
       "mode-mon-col": 3,
       "on-click-right": "Clock",
       "format": {
-        "month": "<span color='#ffead3'><b>{}</b></span>",
-        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-        "today": "<span color='#ff6699'><b>{}</b></span>",
-      },
+        "month": "<b>{}</b>",
+        "weekdays": "<i>{}</i>",
+        "today": "<small>{}</small>"
+      }
     },
     "on-click-right": ""
   },
@@ -126,9 +126,9 @@
       "󰤨"
     ],
     "format": "{icon}",
-    "format-wifi": "network <span style='italic' weight='900' color='#df6124'>{signalStrength}%</span>",
-    "format-ethernet": "network <span style='italic' weight='900' color='#df6124'>on</span>",
-    "format-disconnected": "network <span style='italic' weight='900' color='#df6124'>off 󰤮 / 󰈀 </span>",
+    "format-wifi": "network <b>{signalStrength}%</b>",
+    "format-ethernet": "network <b>on</b>",
+    "format-disconnected": "network <b>off 󰤮 / 󰈀 </b>",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-disconnected": "Disconnected",
@@ -137,10 +137,10 @@
     "on-click": "nmtui"
   },
   "battery": {
-    "format": "<span style='italic' weight='900' underline='single' underline_color='#df6124'>bat</span> {capacity}%",
-    "format-discharging": "<span style='italic' weight='900' underline='single' underline_color='#df6124'>bat</span> {capacity}%",
-    "format-charging": "<span style='italic' weight='900' underline='single' underline_color='#df6124'>bat_c</span> {capacity}%",
-    "format-plugged": "<span style='italic' weight='900' color='#df6124'>bat_p</span> {capacity}%",
+    "format": "<b>bat</b> {capacity}%",
+    "format-discharging": "<b>bat</b> {capacity}%",
+    "format-charging": "<b>bat_c</b> {capacity}%",
+    "format-plugged": "<b>bat_p</b> {capacity}%",
     "format-icons": {
       "charging": [
         "󰢜",
@@ -167,7 +167,7 @@
         "󰁹"
       ]
     },
-    "format-full": "<span style='italic' weight='900' underline='single' underline_color='#df6124'>bat_</span> {capacity}%",
+    "format-full": "<b>bat_</b> {capacity}%",
     "tooltip-format-discharging": "{timeTo}",
     "tooltip-format-charging": "{timeTo}",
     "interval": 5,
@@ -177,10 +177,10 @@
       "critical": 10
     }
   },
- "bluetooth": {
-  "justify": "center",
-    "format": "bt <span style='italic' weight='900' color='#df6124'>{status}</span> {num_connections}",
-    "format-disabled": "bt <span style='italic' weight='900' color='#df6124'>{status}</span>",
+  "bluetooth": {
+    "justify": "center",
+    "format": "bt <b>{status}</b> {num_connections}",
+    "format-disabled": "bt <b>{status}</b>",
     "format-connected": "bt {num_connections}",
     "tooltip-format": "Devices connected: {num_connections}",
     "on-click": "blueman-manager"
@@ -192,16 +192,16 @@
     "on-click-right": "pamixer -t",
     "tooltip-format": "Playing at {volume}%",
     "scroll-step": 5,
-    "format-muted": "vol <span style='italic' weight='900' color='#df6124'>muted</span>",
+    "format-muted": "vol <b>muted</b>",
     "format-icons": {
       "headphone": "",
       "default": ["", "", ""]
     }
   },
-   "mpris": {
+  "mpris": {
     "justify": "center",
     "format": " {artist} - {title}",
-    "format-paused": "<span color='grey'>{status_icon}</span>",
+    "format-paused": "<span>{status_icon}</span>",
     "max-length": 45,
     "player-icons": {
       "default": "⏸",
@@ -209,7 +209,8 @@
     },
     "status-icons": {
       "paused": "󰝛"
-    }
+    },
+    "ignored-players": ["firefox"]
   },
   "tray": {
     "icon-size": 12,
