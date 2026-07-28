@@ -3,6 +3,7 @@
   imports = [
     ./packages.nix
     ./link.nix
+    ./matugen/default.nix
     ./shell.nix
     ./starship.nix
     ./git.nix

@@ -1,0 +1,8 @@
+
+@define-color background #{{colors.surface.hex}};
+@define-color foreground #{{colors.on_surface.hex}};
+@define-color accent     #{{colors.primary.hex}};
+
+@define-color warn       #{{colors.tertiary.hex}};
+@define-color critical   #{{colors.error.hex}};
+@define-color text-dim   #{{colors.on_surface_variant.hex}};

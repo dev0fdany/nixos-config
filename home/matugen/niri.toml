@@ -1,0 +1,27 @@
+layout {
+    focus-ring {
+        active-color   "#{{colors.primary.hex}}"
+        inactive-color "#{{colors.surface_container_lowest.hex}}"
+        urgent-color   "#{{colors.error.hex}}"
+    }
+
+    border {
+        active-color   "#{{colors.primary.hex}}"
+        inactive-color "#{{colors.surface_container_lowest.hex}}"
+        urgent-color   "#{{colors.error.hex}}"
+    }
+
+    shadow {
+        color "#{{colors.scrim.hex}}70"
+    }
+
+    tab-indicator {
+        active-color   "#{{colors.primary.hex}}"
+        inactive-color "#{{colors.secondary.hex}}"
+        urgent-color   "#{{colors.error.hex}}"
+    }
+
+    insert-hint {
+        color "#{{colors.primary.hex}}80"
+    }
+}

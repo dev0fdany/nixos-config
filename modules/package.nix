@@ -31,7 +31,6 @@
     wget
     wl-clipboard
     xwayland-satellite
-    matugen
     git
     kitty
     cmake

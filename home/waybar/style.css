@@ -1,11 +1,12 @@
-@define-color background #111111;
-@define-color foreground #d8d3ca;
-@define-color accent #df6124;
+/* Import the Matugen colors */
+@import url("./colors.css");
+
+/* Map your old variables to the dynamic Matugen tokens */
+@define-color background @matugen-background;
+@define-color foreground @matugen-foreground;
+@define-color accent     @matugen-accent;
+
 * {
-
-  /* background-color: @background; */
-  /* color: @foreground; */
-
   border: none;
   min-height: 0;
   font-family: "JetBrains Mono Nerd Font";
@@ -26,13 +27,6 @@ window#waybar  {
   font-weight: bold;
 }
 
-.modules-left {
-
-}
-
-.modules-right {
-}
-
 #workspaces {
     margin: 0px 4px;
     padding: 0px 0px;
@@ -41,7 +35,7 @@ window#waybar  {
 
 #workspaces button {
   all: initial;
-  color: @foreground;
+  color: @accent;
   padding: 0px 2px;
   min-width: 15px;
   margin: 0px 0px;
@@ -81,6 +75,7 @@ window#waybar  {
   font-weight: 900;
   font-size: 14px;
 }
+
 #memory,
 #mpris,
 #tray,
@@ -111,7 +106,7 @@ window#waybar  {
 }
 
 #tray {
-opacity: 1;
+  opacity: 1;
 }
 
 #custom-separator {
@@ -128,33 +123,32 @@ tooltip {
 }
 
 #mpris {
-opacity: 1;
-color: @foreground;
-animation: repeat;
-	animation-name: blink;
-	animation-duration: 3s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  opacity: 1;
+  color: @foreground;
+  animation: repeat;
+  animation-name: blink;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 @keyframes blink {
     to {
-        color: #4a4a4a;
-        
+        color: @matugen-dim;
     }
 }
 
 @keyframes blink2 {
   to {
     background-color: transparent;
-    color: #f53c3c;
+    color: @matugen-critical;
   }
 }
 
 #battery.critical:not(.charging) {
   background-color: transparent;
-  color: #e6d8ba;
+  color: @foreground;
   animation-name: blink2;
   animation-duration: 0.5s;
   animation-timing-function: steps(12);
@@ -164,10 +158,24 @@ animation: repeat;
 
 #memory.warning,
 #cpu.warning {
-    color: #e3c1b1; /* medium load */
+    color: @matugen-warn;
 }
 
 #memory.critical,
 #cpu.critical {
-    color: @accent; /* high load */
+    color: @accent;
+}
+
+/* ========================================================================= */
+/* CSS MAGIC: Target the inline JSON configurations entirely through styles   */
+/* ========================================================================= */
+
+/* Overrides <span color='#df6124'> tags dynamically */
+span[color="#df6124"] {
+  color: @accent !important;
+}
+
+/* Overrides <span underline_color='#df6124'> battery underlines dynamically */
+span[underline_color="#df6124"] {
+  text-decoration-color: @accent !important;
 }
