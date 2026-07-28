@@ -25,4 +25,3 @@ ignore-timeout=0
 
 # --- Sound Notification ---
 on-notify=exec mpv /etc/nixos/home/mako/notification-generic.wav
-include=colors

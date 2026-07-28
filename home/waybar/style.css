@@ -167,15 +167,32 @@ tooltip {
 }
 
 /* ========================================================================= */
-/* CSS MAGIC: Target the inline JSON configurations entirely through styles   */
+/* CSS TARGET CORES: Style text components using your dynamic Matugen accents*/
 /* ========================================================================= */
 
-/* Overrides <span color='#df6124'> tags dynamically */
-span[color="#df6124"] {
+#network label b,
+#bluetooth label b,
+#power-profiles-daemon label b,
+#pulseaudio label b {
+  font-style: italic;
+  font-weight: 900;
   color: @accent !important;
 }
 
-/* Overrides <span underline_color='#df6124'> battery underlines dynamically */
-span[underline_color="#df6124"] {
-  text-decoration-color: @accent !important;
+#battery label b {
+  font-style: italic;
+  font-weight: 900;
+  color: @accent !important;
+  border-bottom: 2px solid @accent;
 }
+
+#battery label small {
+  font-style: italic;
+  font-weight: 900;
+  color: @accent !important;
+}
+
+calendar label b { color: @matugen-accent; font-weight: bold; }
+calendar label i { color: @matugen-dim; font-style: italic; }
+calendar label small { color: @matugen-warn; }
+

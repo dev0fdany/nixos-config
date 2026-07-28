@@ -15,7 +15,7 @@
 
     [templates.mako]
     input_path = '~/.config/matugen/templates/mako.ini'
-    output_path = '~/.config/mako/colors'
+    output_path = '~/.config/mako/config'
 
     [templates.kitty]
     input_path = '~/.config/matugen/templates/kitty.conf'

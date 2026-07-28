@@ -63,10 +63,10 @@
     "format": "power {icon}",
     "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
     "tooltip": true,
-   "format-icons": {
-      "performance": "<span style='italic'weight='900' color='accent-text'>performance</span>",
-      "balanced": "<span style='italic' weight='900' color='accent-text'>balanced</span>",
-      "power-saver": "<span style='italic' weight='900' color='accent-text'>saver</span>"
+    "format-icons": {
+      "performance": "<span style='italic' weight='900' color='#df6124'>performance</span>",
+      "balanced": "<span style='italic' weight='900' color='#df6124'>balanced</span>",
+      "power-saver": "<span style='italic' weight='900' color='#df6124'>saver</span>"
     }
   },
   "cpu": {
@@ -126,9 +126,9 @@
       "󰤨"
     ],
     "format": "{icon}",
-    "format-wifi": "network <span style='italic' weight='900' color='accent-text'>{signalStrength}%</span>",
-    "format-ethernet": "network <span style='italic' weight='900' color='accent-text'>on</span>",
-    "format-disconnected": "network <span style='italic' weight='900' color='accent-text'>off 󰤮 / 󰈀 </span>",
+    "format-wifi": "network <span style='italic' weight='900' color='#df6124'>{signalStrength}%</span>",
+    "format-ethernet": "network <span style='italic' weight='900' color='#df6124'>on</span>",
+    "format-disconnected": "network <span style='italic' weight='900' color='#df6124'>off 󰤮 / 󰈀 </span>",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-disconnected": "Disconnected",
@@ -137,10 +137,10 @@
     "on-click": "nmtui"
   },
   "battery": {
-    "format": "<span style='italic' weight='900' underline='single' underline_color='accent-text'>bat</span> {capacity}%",
+    "format": "<span style='italic' weight='900' underline='single' underline_color='#df6124'>bat</span> {capacity}%",
     "format-discharging": "<span style='italic' weight='900' underline='single' underline_color='#df6124'>bat</span> {capacity}%",
-    "format-charging": "<span style='italic' weight='900' underline='single' underline_color='accent-text'>bat_c</span> {capacity}%",
-    "format-plugged": "<span style='italic' weight='900' color='accent-text'>bat_p</span> {capacity}%",
+    "format-charging": "<span style='italic' weight='900' underline='single' underline_color='#df6124'>bat_c</span> {capacity}%",
+    "format-plugged": "<span style='italic' weight='900' color='#df6124'>bat_p</span> {capacity}%",
     "format-icons": {
       "charging": [
         "󰢜",
@@ -167,7 +167,7 @@
         "󰁹"
       ]
     },
-    "format-full": "<span style='italic' weight='900' underline='single' underline_color='accent-text'>bat_</span> {capacity}%",
+    "format-full": "<span style='italic' weight='900' underline='single' underline_color='#df6124'>bat_</span> {capacity}%",
     "tooltip-format-discharging": "{timeTo}",
     "tooltip-format-charging": "{timeTo}",
     "interval": 5,
@@ -179,8 +179,8 @@
   },
  "bluetooth": {
   "justify": "center",
-    "format": "bt <span style='italic' weight='900' color='accent-text'>{status}</span> {num_connections}",
-    "format-disabled": "bt <span style='italic' weight='900' color='accent-text'>{status}</span>",
+    "format": "bt <span style='italic' weight='900' color='#df6124'>{status}</span> {num_connections}",
+    "format-disabled": "bt <span style='italic' weight='900' color='#df6124'>{status}</span>",
     "format-connected": "bt {num_connections}",
     "tooltip-format": "Devices connected: {num_connections}",
     "on-click": "blueman-manager"
@@ -192,7 +192,7 @@
     "on-click-right": "pamixer -t",
     "tooltip-format": "Playing at {volume}%",
     "scroll-step": 5,
-    "format-muted": "vol <span style='italic' weight='900' color='accent-text'>muted</span>",
+    "format-muted": "vol <span style='italic' weight='900' color='#df6124'>muted</span>",
     "format-icons": {
       "headphone": "",
       "default": ["", "", ""]

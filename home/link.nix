@@ -13,7 +13,7 @@
 
   # mako 
   services.mako.enable = true;
-  xdg.configFile."mako/config".source = ./mako/config;
+  #xdg.configFile."mako/config".source = ./mako/config;
 
 
 }
