@@ -21,6 +21,19 @@
       ];
     };
 
+    homeConfigurations.dwtop =
+      home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+  
+        extraSpecialArgs = {
+          inherit inputs;
+        };
+  
+        modules = [
+          ./home/default.nix
+        ];
+      };
+
     devShells.x86_64-linux = 
       let
         pkgs = nixpkgs.legacyPackages.x86_64-linux;

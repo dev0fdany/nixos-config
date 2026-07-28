@@ -13,6 +13,8 @@
     shellAliases = {
       nd = "custom_nix_develop";
       ven = "sudo -E vim /etc/nixos/";
+      hms = "home-manager switch --flake /etc/nixos#dwtop";
+      nrs = "sudo nixos-rebuild switch --flake /etc/nixos#nixos";
     };
     initContent = ''
       function custom_nix_develop() {
