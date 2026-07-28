@@ -137,37 +137,19 @@
     "on-click": "nmtui"
   },
   "battery": {
-    "format": "<b>bat</b> {capacity}%",
-    "format-discharging": "<b>bat</b> {capacity}%",
-    "format-charging": "<b>bat_c</b> {capacity}%",
-    "format-plugged": "<b>bat_p</b> {capacity}%",
+    "format": "<u>bat</u> {capacity}% {icon}",
+    "format-discharging": "<u>bat</u> {capacity}% {icon}",
+    "format-charging": "<u>bat_c</u> {capacity}% {icon}",
+    "format-plugged": "<b>bat_p</b> {capacity}% {icon}",
+    "format-full": "<u>bat_</u> {capacity}% {icon}",
     "format-icons": {
       "charging": [
-        "󰢜",
-        "󰂆",
-        "󰂇",
-        "󰂈",
-        "󰢝",
-        "󰂉",
-        "󰢞",
-        "󰂊",
-        "󰂋",
-        "󰂅"
+        "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"
       ],
       "default": [
-        "󰁺",
-        "󰁻",
-        "󰁼",
-        "󰁽",
-        "󰁾",
-        "󰁿",
-        "󰂀",
-        "󰂁",
-        "󰂂",
-        "󰁹"
+        "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
       ]
     },
-    "format-full": "<b>bat_</b> {capacity}%",
     "tooltip-format-discharging": "{timeTo}",
     "tooltip-format-charging": "{timeTo}",
     "interval": 5,
@@ -210,7 +192,7 @@
     "status-icons": {
       "paused": "󰝛"
     },
-    "ignored-players": ["firefox"]
+    "ignored-players": ["firefox", "chromium", "brave"]
   },
   "tray": {
     "icon-size": 12,

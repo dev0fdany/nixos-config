@@ -1,10 +1,10 @@
-/* Import the Matugen colors */
+/* Import dynamic Matugen colors */
 @import url("./colors.css");
 
-/* Map variables to Matugen tokens */
+/* Map variables */
 @define-color background @matugen-background;
 @define-color foreground @matugen-foreground;
-@define-color accent @matugen-accent;
+@define-color accent     @matugen-accent;
 
 * {
   border: none;
@@ -13,7 +13,7 @@
 }
 
 window#waybar {
-  background-color: @background;
+  background-color: transparent;
 }
 
 #waybar > box {
@@ -35,29 +35,29 @@ window#waybar {
 
 #workspaces button {
   all: initial;
-  color: @accent;
+  color: @foreground;
   padding: 0px 2px;
   min-width: 15px;
   margin: 0px 0px;
   border: none;
-  opacity: 0.60;
-  font-weight: 900;
+  opacity: 0.75;
+  font-weight: bold;
   font-size: 14px;
 }
 
 #workspaces button.active {
-  color: @accent;
-  background: transparent;
-  opacity: 1;
-  font-weight: 900;
+  color: @background;
+  background: @foreground;
+  opacity: 0.75;
+  font-weight: bold;
   font-size: 14px;
 }
 
 #workspaces button.empty:hover, 
 #workspaces button:hover {
   background: transparent;
-  color: alpha(@foreground, 0.75);
-  opacity: 0.75;
+  color: alpha(@foreground, 1);
+  opacity: 1;
   font-weight: bold;
   font-size: 14px;
 }
@@ -69,10 +69,11 @@ window#waybar {
   font-size: 14px;
 }
 
-#workspaces button.active.empty {
-  color: @accent;
-  opacity: 1;
-  font-weight: 900;
+#workspaces button.empty.active {
+  opacity: 0.75;
+  background-color: @foreground;
+  color: @background;
+  font-weight: bold;
   font-size: 14px;
 }
 
@@ -97,6 +98,7 @@ window#waybar {
   opacity: 1;
   font-weight: bold;
   font-size: 12px;
+  color: @foreground;
 }
 
 #clock {
@@ -119,7 +121,16 @@ window#waybar {
 }
 
 tooltip {
-  padding: 2px;
+  padding: 4px;
+  background: @background;
+  font-size: 11px;
+  border: 1px solid alpha(@foreground, 0.6);
+  border-radius: 8px;
+}
+
+tooltip label {
+  color: alpha(@foreground, 1);
+  font-weight: normal;
 }
 
 #mpris {
@@ -163,57 +174,30 @@ tooltip {
 
 #memory.critical,
 #cpu.critical {
-  color: @accent;
+  color: @matugen-critical;
 }
 
 /* ========================================================================= */
-/* CSS TARGET CORES: Style text components using dynamic Matugen accents     */
+/* ACCENT STYLING: Applies Matugen @accent to valid Pango tags (<b> and <u>) */
 /* ========================================================================= */
-/* Power, Bluetooth, Network, Pulseaudio, and Battery bold text */
+
 #network label b,
-#network b,
 #bluetooth label b,
-#bluetooth b,
 #power-profiles-daemon label b,
-#power-profiles-daemon b,
 #pulseaudio label b,
-#pulseaudio b,
-#battery label b,
-#battery b {
+#battery label b {
+  color: @accent;
   font-style: italic;
   font-weight: 900;
+}
+
+#battery label u {
   color: @accent;
-}
-
-/* Specific styling for the battery module label */
-#battery label b,
-#battery b {
-  border-bottom: 2px solid @accent;
-}
-
-#battery label small,
-#battery small {
   font-style: italic;
   font-weight: 900;
-  color: @accent;
+  text-decoration: underline;
 }
 
-/* Calendar styling in clock tooltip */
-calendar {
-  background-color: @background;
-  color: @foreground;
-}
-
-calendar label b {
-  color: @matugen-accent;
-  font-weight: bold;
-}
-
-calendar label i {
-  color: @matugen-dim;
-  font-style: italic;
-}
-
-calendar label small {
-  color: @matugen-warn;
-}
+calendar label b { color: @matugen-accent; font-weight: bold; }
+calendar label i { color: @matugen-dim; font-style: italic; }
+calendar label small { color: @matugen-warn; }
