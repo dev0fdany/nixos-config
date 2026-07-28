@@ -167,7 +167,7 @@
         "󰁹"
       ]
     },
-    "format-full": "<<span style='italic' weight='900' underline='single' underline_color='#df6124'>bat_</span> {capacity}%",
+    "format-full": "<span style='italic' weight='900' underline='single' underline_color='#df6124'>bat_</span> {capacity}%",
     "tooltip-format-discharging": "{timeTo}",
     "tooltip-format-charging": "{timeTo}",
     "interval": 5,

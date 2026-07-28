@@ -54,6 +54,7 @@
     yt-dlp
     cava
     cmatrix
+    home-manager
     awww
     wlsunset
     pavucontrol

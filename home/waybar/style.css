@@ -1,8 +1,10 @@
 @define-color background #111111;
 @define-color foreground #d8d3ca;
+@define-color accent #df6124;
 * {
-  background-color: @background;
-  color: @foreground;
+
+  /* background-color: @background; */
+  /* color: @foreground; */
 
   border: none;
   min-height: 0;
@@ -38,33 +40,30 @@ window#waybar  {
 }
 
 #workspaces button {
+  all: initial;
   color: @foreground;
   padding: 0px 2px;
   min-width: 15px;
   margin: 0px 0px;
   border: none;
   opacity: 0.60;
-  font-weight: bold;
+  font-weight: 900;
   font-size: 14px;
 }
 
 #workspaces button.active {
-  color: #df6124;
+  color: @accent;
   background: transparent;
   opacity: 1;
-  font-weight: bold;
+  font-weight: 900;
   font-size: 14px;
-  padding: 0px 8px;
-  border: none;
-  box-shadow: none;
-  border-radius: 0px;
 }
 
 #workspaces button.empty:hover, 
 #workspaces button:hover {
     background: transparent;
-    color: alpha(#df6124, 1);
-    opacity: 1;
+    color: alpha(@foreground, 0.75);
+    opacity: 0.75;
     font-weight: bold;
     font-size: 14px;
 }
@@ -74,20 +73,14 @@ window#waybar  {
   color: alpha(@foreground, 0.45);
   font-weight: bold;
   font-size: 14px;
-  background: transparent;
-  border: none;
-  box-shadow: none;
 }
 
-#workspaces button.empty.active {
-  opacity: 0.75;
-  background: transparent;
-  color: #df6124;
-  border: none;
-  box-shadow: none;font-weight: bold;
+#workspaces button.active.empty {
+  color: @accent;
+  opacity: 1;
+  font-weight: 900;
   font-size: 14px;
 }
-
 #memory,
 #mpris,
 #tray,
@@ -176,5 +169,5 @@ animation: repeat;
 
 #memory.critical,
 #cpu.critical {
-    color: #df6124; /* high load */
+    color: @accent; /* high load */
 }

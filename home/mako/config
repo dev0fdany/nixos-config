@@ -1,38 +1,27 @@
-# Take a look at the mako manpage with the command:
-#   man 5 mako
-# To view all configuration options.
+# --- Positioning ---
+anchor=top-right
+margin=20
 
-font=Cozette 11
-format=<b>%a ⏵</b> %s\n%b
-sort=-time
-output=eDP-1
-layer=overlay
-anchor=bottom-center
-background-color=#2e3440
-width=300
-height=110
-margin=5
-padding=0,5,10
+# --- Pill Shape Layout ---
+width=350
+height=100
+border-radius=10
 border-size=2
-border-color=#88c0d0
-border-radius=15
-icons=never
-max-icon-size=64
+padding=15
+
+# --- Catppuccin Mocha Color Scheme ---
+background-color=#1B1B21
+border-color=#595992
+
+text-color=#cdd6f4ff
+
+# --- Font & Text Formatting ---
+font=sans-serif 11
+text-alignment=left
+
+# --- Behavior ---
 default-timeout=5000
-ignore-timeout=1
+ignore-timeout=0
 
-[urgency=normal]
-border-color=#d08770
-
-[urgency=high]
-border-color=#bf616a
-default-timeout=0
-
-[app-name=lightcord]
-border-color=#88c0d0
-
-[summary~="log-.*"]
-border-color=#a3be8c
-
-[app-name=lightcord summary~="(.*(^| )orz|ORZ|sto|STO|otl|OTL( |$).*)"]
-invisible=1
+# --- Sound Notification ---
+on-notify=exec mpv /etc/nixos/home/mako/notification-generic.wav
