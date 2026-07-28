@@ -58,7 +58,6 @@
     wlsunset
     pavucontrol
     sound-theme-freedesktop
-    starship
     whitesur-icon-theme  
     whitesur-gtk-theme
     whitesur-cursors

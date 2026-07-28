@@ -38,19 +38,18 @@ window#waybar  {
 }
 
 #workspaces button {
-  all: unset;
   color: @foreground;
   padding: 0px 2px;
   min-width: 15px;
   margin: 0px 0px;
   border: none;
-  opacity: 0.75;
+  opacity: 0.60;
   font-weight: bold;
   font-size: 14px;
 }
 
 #workspaces button.active {
-  color: @background;
+  color: #df6124;
   background: transparent;
   opacity: 1;
   font-weight: bold;
@@ -64,7 +63,7 @@ window#waybar  {
 #workspaces button.empty:hover, 
 #workspaces button:hover {
     background: transparent;
-    color: alpha(@foreground, 1);
+    color: alpha(#df6124, 1);
     opacity: 1;
     font-weight: bold;
     font-size: 14px;
@@ -83,7 +82,7 @@ window#waybar  {
 #workspaces button.empty.active {
   opacity: 0.75;
   background: transparent;
-  color: @background;
+  color: #df6124;
   border: none;
   box-shadow: none;font-weight: bold;
   font-size: 14px;
