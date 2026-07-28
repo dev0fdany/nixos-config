@@ -31,6 +31,8 @@
     wget
     wl-clipboard
     xwayland-satellite
+    chafa # scirpts
+    imagemagick # scripts
     git
     kitty
     cmake
