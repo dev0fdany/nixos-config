@@ -142,9 +142,9 @@
         cpp = pkgs.mkShell {
           buildInputs = with pkgs; [
             gcc
+            libcs50
             gnumake
             cmake
-            libcs50
             gdb
           ];
 
@@ -154,9 +154,6 @@
               export IN_NIX_SHELL_ZSH=1
               exec zsh
             fi          
-          export LD_LIBRARY_PATH="/run/opengl-driver/lib:${pkgs.lib.makeLibraryPath [ 
-              pkgs.libcs50 
-            ]}:$LD_LIBRARY_PATH"
           '';
         };
         # ----------------------------------------
