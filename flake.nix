@@ -144,9 +144,15 @@
             gcc
             gnumake
             cmake
+            libcs50
             gdb
           ];
           shellHook = ''
+          export DEV_LANG=" ++"
+            if [ -z "$IN_NIX_SHELL_ZSH" ]; then
+              export IN_NIX_SHELL_ZSH=1
+              exec zsh
+            fi          
           '';
         };
         # ----------------------------------------
@@ -157,11 +163,6 @@
             git
           ];
           shellHook = ''
-          export DEV_LANG=" ++"
-            if [ -z "$IN_NIX_SHELL_ZSH" ]; then
-              export IN_NIX_SHELL_ZSH=1
-              exec zsh
-            fi          
           '';
         };
       };
