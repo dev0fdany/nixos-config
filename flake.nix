@@ -154,6 +154,8 @@
               export IN_NIX_SHELL_ZSH=1
               exec zsh
             fi          
+          export LD_LIBRARY_PATH="${pkgs.libcs50}/lib:$LD_LIBRARY_PATH"
+          echo "🎓 CS50 Environment Loaded Successfully!"
           '';
         };
         # ----------------------------------------
