@@ -64,6 +64,7 @@
     whitesur-gtk-theme
     whitesur-cursors
     brightnessctl
+    zig
   ];
   programs.nix-ld.enable = true;
 }
