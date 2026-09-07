@@ -21,12 +21,6 @@
         j = "down";
         k = "up";
         l = "right";
-
-        a = "Adiaeresis";
-        o = "Odiaeresis";
-        u = "Udiaeresis";
-        s = "ssharp"; 
-      };
     };
   };
  };
