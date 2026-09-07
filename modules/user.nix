@@ -14,15 +14,14 @@
     keyboards.default = {
        settings = {
          main = {
-          rightalt = "layer(vim_arrows)";
+          rightalt = "layer(key_binds)";
       };
-      vim_arrows = {
+      key_binds = {
         h = "left";
         j = "down";
         k = "up";
         l = "right";
-      };
-      german_ch = {
+
         a = "Adiaeresis";
         o = "Odiaeresis";
         u = "Udiaeresis";
