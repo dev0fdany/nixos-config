@@ -22,6 +22,12 @@
         k = "up";
         l = "right";
       };
+      german_ch = {
+        a = "Adiaeresis";
+        o = "Odiaeresis";
+        u = "Udiaeresis";
+        s = "ssharp"; 
+      };
     };
   };
  };
