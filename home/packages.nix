@@ -20,6 +20,7 @@
     matugen
     tty-clock
     cbonsai
+    eww
 
     # Fonts (ensure noto-fonts-cjk-sans is included if needed for CJK)
     #noto-fonts
