@@ -21,6 +21,7 @@
     tty-clock
     cbonsai
     eww
+    imv
 
     # Fonts (ensure noto-fonts-cjk-sans is included if needed for CJK)
     #noto-fonts
