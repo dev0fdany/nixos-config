@@ -19,6 +19,7 @@
   programs.home-manager.enable = true;
   
   home.pointerCursor = {
+    enable = true;
     name = "WhiteSur-cursors";
     size = 20;
     package = pkgs.whitesur-icon-theme;
