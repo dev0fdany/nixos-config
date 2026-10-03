@@ -38,9 +38,7 @@
       let
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
       in {
-        # ----------------------------------------
-        # 1. PYTHON & PYGAME PROFILE
-        # ----------------------------------------
+        # PYTHON PROFILE
         py = pkgs.mkShell {
           buildInputs = with pkgs; [
             python3
@@ -136,9 +134,7 @@
             fi          
           '';
         };
-        # ----------------------------------------
-        # 2. C / C++ PROFILE
-        # ----------------------------------------
+        # C / C++ PROFILE
         cpp = pkgs.mkShell {
           buildInputs = with pkgs; [
             gcc
@@ -155,9 +151,7 @@
             fi          
           '';
         };
-        # ----------------------------------------
-        #        DEFAULT FALLBACK PROFILE
-        # ----------------------------------------
+        # DEFAULT FALLBACK PROFILE
         default = pkgs.mkShell {
           buildInputs = with pkgs; [
             git
