@@ -1,5 +1,5 @@
 {
-  description = "A very basic flake";
+  description = "Danyal's NixOS flake";
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
@@ -8,11 +8,14 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     stylix = {
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     niri.url = "github:sodiboo/niri-flake";
+
   };
   outputs = { self, nixpkgs, zen-browser, helium, home-manager, stylix, niri, ... }@inputs: {
   
@@ -22,8 +25,6 @@
       modules = [ 
         { nixpkgs.hostPlatform = "x86_64-linux";}
         ./configuration.nix
-        
-       stylix.nixosModules.stylix 
       ];
     };
 
