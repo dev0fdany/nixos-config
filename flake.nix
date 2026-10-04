@@ -8,9 +8,13 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    stylix = {
+      url = "github:danth/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     niri.url = "github:sodiboo/niri-flake";
   };
-  outputs = { self, nixpkgs, zen-browser, helium, home-manager, niri, ... }@inputs: {
+  outputs = { self, nixpkgs, zen-browser, helium, home-manager, stylix, niri, ... }@inputs: {
   
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -18,6 +22,8 @@
       modules = [ 
         { nixpkgs.hostPlatform = "x86_64-linux";}
         ./configuration.nix
+        
+       stylix.nixosModules.stylix 
       ];
     };
 
@@ -31,6 +37,8 @@
   
         modules = [
           ./home/default.nix
+
+          stylix.homeManagerModules.stylix
         ];
       };
 
