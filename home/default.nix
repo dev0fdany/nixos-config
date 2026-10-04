@@ -2,11 +2,13 @@
 {
   imports = [
     ./packages.nix
-    ./link.nix
+    ./stylix.nix
+    ./waybar.nix
     ./matugen/default.nix
     ./shell.nix
     ./starship.nix
     ./git.nix
+    #./niri.nix
   ];
 
   home = {
@@ -29,5 +31,8 @@
   extraPortals = [ pkgs.xdg-desktop-portal-gnome ];
   config.common.default = [ "gnome" "gtk" ];
 };
+
+
+  services.mako.enable = true;
 
 }

@@ -1,7 +1,0 @@
-@define-color matugen-background {{colors.surface.default.hex}};
-@define-color matugen-foreground {{colors.on_surface.default.hex}};
-@define-color matugen-accent {{colors.primary.default.hex}};
-
-@define-color matugen-warn {{colors.tertiary.default.hex}};
-@define-color matugen-critical {{colors.error.default.hex}};
-@define-color matugen-dim {{colors.on_surface_variant.default.hex}};

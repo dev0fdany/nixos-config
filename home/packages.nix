@@ -24,13 +24,8 @@
     lua
     gh # github
 
-    # Fonts (ensure noto-fonts-cjk-sans is included if needed for CJK)
-    #noto-fonts
-    #noto-fonts-cjk-sans
     noto-fonts-color-emoji
-    #nerd-fonts.fira-code
     nerd-fonts.jetbrains-mono
-    #nerd-fonts.iosevka
   ];
 
   # Font configuration
