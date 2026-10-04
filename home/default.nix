@@ -4,7 +4,6 @@
     ./packages.nix
     ./stylix.nix
     ./waybar.nix
-    ./matugen/default.nix
     ./shell.nix
     ./starship.nix
     ./git.nix
