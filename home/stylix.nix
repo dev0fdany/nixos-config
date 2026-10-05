@@ -1,37 +1,39 @@
-{ pkgs, config, lib, ... }: {
+{ pkgs, config, lib, inputs, ... }:
+{
   stylix = {
     enable = true;
     polarity = "dark"; # "dark" or "light"
 
     # Base image used to derive colors automatically when no base16Scheme is set
-    image = "${config.home.homeDirectory}/Pictures/walls/PewDiePie_compressed.webp"; # Path to a default image in your repo/home
-
+    image = ./default-wallpaper/default.png; # Path to a default image in your repo/home
     # Optional: If you prefer a specific base16 color scheme instead of auto-generated ones
-    # base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-dark.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
 
+    autoEnable = true;
+    
     opacity = {
-      applications = 0.95;
-      terminal = 0.90;
-      desktop = 0.90;
+      applications = 1.0;
+      terminal = 0.8;
+      desktop = 1.0;
       popups = 0.95;
     };
 
     fonts = {
       serif = {
-        package = pkgs.dejavu_fonts;
-        name = "DejaVu Serif";
+        package = pkgs.noto-fonts;
+        name = "Noto Serif";
       };
       sansSerif = {
-        package = pkgs.dejavu_fonts;
-        name = "DejaVu Sans";
+        package = pkgs.noto-fonts;
+        name = "Noto Sans";
       };
       monospace = {
-        package = pkgs.nerdfonts.override { fonts = [ "FiraCode" ]; };
-        name = "FiraCode Nerd Font";
+        package = pkgs.jetbrains-mono;
+        name = "JetBrains Mono";
       };
       emoji = {
-        package = pkgs.noto-fonts-emoji;
-        name = "Noto Color Emoji";
+        package = pkgs.emptyDirectory; 
+        name = "Apple Color Emoji";
       };
       sizes = {
         applications = 11;
@@ -51,10 +53,8 @@
       gnome.enable = true;
       btop.enable = true;
       zathura.enable = true;
-      ranger.enable = true;
       vscode.enable = true;
       mpv.enable = true;
-      niri.enable = true;
     };
   };
 }

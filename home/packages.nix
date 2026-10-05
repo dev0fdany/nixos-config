@@ -24,10 +24,19 @@
     lua
     gh # github
 
-    noto-fonts-color-emoji
-    nerd-fonts.jetbrains-mono
+    noto-fonts
+    jetbrains-mono
   ];
 
   # Font configuration
-  fonts.fontconfig.enable = true;
+  fonts.fontconfig = {
+    enable = true;
+    defaultFonts = {
+      monospace = [ "JetBrains Mono" ];
+      sansSerif = [ "Noto Serif " ];
+      serif = [ "Noto Sans" ];
+      emoji = [ "Apple Color Emoji" ];
+    };
+  };
 }
+

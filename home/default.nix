@@ -4,10 +4,11 @@
     ./packages.nix
     ./stylix.nix
     ./waybar.nix
+    ./config/kitty.nix
+    ./mako/mako.nix
     ./shell.nix
     ./starship.nix
     ./git.nix
-    #./niri.nix
   ];
 
   home = {
@@ -25,13 +26,11 @@
     size = 20;
     package = pkgs.whitesur-icon-theme;
   };
+
   xdg.portal = {
   enable = true;
   extraPortals = [ pkgs.xdg-desktop-portal-gnome ];
   config.common.default = [ "gnome" "gtk" ];
 };
-
-
-  services.mako.enable = true;
 
 }

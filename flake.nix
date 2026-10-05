@@ -39,7 +39,7 @@
         modules = [
           ./home/default.nix
 
-          stylix.homeManagerModules.stylix
+          stylix.homeModules.stylix
         ];
       };
 
