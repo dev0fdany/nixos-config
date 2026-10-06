@@ -25,6 +25,7 @@
       modules = [ 
         { nixpkgs.hostPlatform = "x86_64-linux";}
         ./configuration.nix
+        stylix.nixosModules.stylix
       ];
     };
 
@@ -38,7 +39,6 @@
   
         modules = [
           ./home/default.nix
-
           stylix.homeModules.stylix
         ];
       };
