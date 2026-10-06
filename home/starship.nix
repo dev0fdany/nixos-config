@@ -10,13 +10,15 @@
     enableZshIntegration = true;
 
     settings = {
+      command_timeout = 500;
+
       format = lib.concatStrings [
         "$python"
         "$directory"
         "$git_branch"
         "$git_status"
         "$fill"
-        "$env_var"
+        "$nix_shell"
         "$jobs"
         "$cmd_duration"
         "$line_break"
@@ -43,12 +45,10 @@
         format = "on [$symbol$branch]($style) ";
       };
 
-/*
       git_status = {
-        style = "bg:color_green bold fg:color_fg_dark";
-        format = "[$all_status$ahead_behind]($style)";
+        disabled = false;
+        ignore_submodules = true;
       };
-*/
 
       fill = {
         symbol = "·";
@@ -86,14 +86,9 @@
         style = "bold";
       };
       
-      custom = {
-        nix = {
-          command = "echo '  nix'";
-          when = "test -n \"$IN_NIX_SHELL\"";
-          format = "[in](bold red) [$output](bold cyan) ";
-        };
+      nix_shell = {
+        format = "[in](bold red) [  nix](bold cyan) ";
       };
-
 
       character = {
         disabled = false;

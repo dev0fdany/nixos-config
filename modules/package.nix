@@ -3,7 +3,6 @@
   programs.xwayland.enable = true;
   programs.thunar.enable = true;
   programs.xfconf.enable = true;
-  programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
   programs.dconf.enable = true;
   programs.dconf.profiles.user.databases = [{
@@ -65,6 +64,7 @@
     whitesur-cursors
     brightnessctl
     zig
+    zsh
   ];
   programs.nix-ld.enable = true;
 }
