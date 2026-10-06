@@ -8,12 +8,14 @@
     useUserPackages = true;
     extraSpecialArgs = { inherit inputs; };
     users = {
-      dwtop = {
+      dwtop = { config, pkgs, ... }: {
         imports = [
-        import ../home/default.nix
-        inputs.stylix.homeModules.stylix
+          import ../home/default.nix
+          
+          inputs.stylix.homeModules.stylix
         ];
       };
     };
   };  
 }
+
