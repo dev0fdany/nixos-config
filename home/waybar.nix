@@ -25,6 +25,7 @@
       @define-color dim        #${config.lib.stylix.colors.base04};
 
       * {
+        font-family: "JetBrainsMono Nerd Font";
         border: none;
         min-height: 0;
       }
@@ -217,3 +218,4 @@
 
   xdg.configFile."waybar/config.jsonc".source = ./waybar/config.jsonc;
 }
+

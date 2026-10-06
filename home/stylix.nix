@@ -7,7 +7,7 @@
     # Base image used to derive colors automatically when no base16Scheme is set
     image = ./default-wallpaper/default.png; # Path to a default image in your repo/home
     # Optional: If you prefer a specific base16 color scheme instead of auto-generated ones
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 
     autoEnable = true;
     
@@ -28,12 +28,16 @@
         name = "Noto Sans";
       };
       monospace = {
-        package = pkgs.nerd-fonts.jetbrains-mono;
-        name = "JetBrainsMono Nerd Font";
+        package = pkgs.noto-fonts;
+        name = "Noto Sans Mono";
+        #package = pkgs.nerd-fonts.jetbrains-mono;
+        #name = "JetBrainsMono Nerd Font, Noto Color Emoji, Apple Color Emoji";
       };
       emoji = {
-        package = pkgs.emptyDirectory; 
-        name = "Apple Color Emoji";
+        package = pkgs.noto-fonts-color-emoji;
+        name = "Noto Color Emoji";
+        #package = pkgs.emptyDirectory; 
+        #name = "Apple Color Emoji";
       };
       sizes = {
         applications = 11;
