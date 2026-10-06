@@ -16,10 +16,8 @@
       border-size = 2;
       padding = "15";
       
+      "on-notify" = "exec ${pkgs.mpv}/bin/mpv --no-video /etc/nixos/home/mako/notification-generic.wav";
       text-alignment = "left";
     };
-
-    extraConfig = ''
-     on-notify=exec ${pkgs.mpv}/bin/mpv --no-video --no-terminal --volume=80 ${./notification-generic.wav}'';
   };
 }
