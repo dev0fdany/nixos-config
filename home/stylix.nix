@@ -56,6 +56,7 @@
       gtk.enable = true;
       gnome.enable = true;
       btop.enable = true;
+      cava.enable = true;
       zathura.enable = true;
       vscode.enable = true;
       mpv.enable = true;

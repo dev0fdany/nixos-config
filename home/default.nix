@@ -6,6 +6,8 @@
     ./waybar.nix
     ./config/kitty.nix
     ./config/fuzzel.nix
+    ./config/btop.nix
+    ./config/cava.nix
     ./mako/mako.nix
     ./shell.nix
     ./starship.nix
