@@ -22,6 +22,7 @@
     cbonsai
     imv
     lua
+    starship
     gh # github
     
     # fonts
