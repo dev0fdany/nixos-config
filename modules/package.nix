@@ -4,6 +4,8 @@
   programs.thunar.enable = true;
   programs.xfconf.enable = true;
   users.defaultUserShell = pkgs.zsh;
+  users.users.dwtop.ignoreShellProgramCheck = true;
+  users.users.root.ignoreShellProgramCheck = true;
   programs.dconf.enable = true;
   programs.dconf.profiles.user.databases = [{
   settings = {
