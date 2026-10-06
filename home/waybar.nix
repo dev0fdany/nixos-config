@@ -12,15 +12,13 @@
       targets = [ "graphical-session.target" ]; 
     };
 
-    # Appends clean text workspaces and colors directly mapped from your Stylix theme
     style = lib.mkAfter ''
       @define-color background #${config.lib.stylix.colors.base00};
       @define-color foreground #${config.lib.stylix.colors.base05};
       
-      /* STYLIX COLOURED WORKSPACE HOOKS */
-      @define-color ws-active   #${config.lib.stylix.colors.base0D}; /* Active Accent */
-      @define-color ws-occupied #${config.lib.stylix.colors.base0B}; /* Has Windows */
-      @define-color ws-empty    #${config.lib.stylix.colors.base03}; /* Empty Workspaces (Gray) */
+      @define-color ws-active   #${config.lib.stylix.colors.base0D};
+      @define-color ws-occupied #${config.lib.stylix.colors.base0B};
+      @define-color ws-empty    #${config.lib.stylix.colors.base03};
 
       @define-color warn       #${config.lib.stylix.colors.base0A};
       @define-color critical   #${config.lib.stylix.colors.base08};
@@ -52,11 +50,10 @@
         padding-top: 2px;
       }
 
-      /* Base button cleanup - Targeting buttons and their internal text tracks */
       #workspaces button,
       #workspaces button label,
       #workspaces button image {
-        font-weight: bold; /* Keep everything bold across all states */
+        font-weight: bold;
         font-size: 14px;
         text-decoration: none;
         text-shadow: none;
@@ -68,7 +65,6 @@
         outline: none;
       }
 
-      /* 1. STATE: Workspaces that have windows open (Occupied) */
       #workspaces button {
         color: @ws-occupied;
         padding: 0px 8px;
@@ -77,19 +73,16 @@
         opacity: 0.9;
       }
 
-      /* 2. STATE: The workspace you are currently looking at (Active) */
       #workspaces button.active {
         color: @ws-active; 
         opacity: 1.0;
       }
 
-      /* 3. STATE: Workspaces completely empty of any windows */
       #workspaces button.empty {
         color: @ws-empty;
         opacity: 0.6;
       }
 
-      /* 4. STATE: Empty but actively selected workspace */
       #workspaces button.empty.active {
         color: @ws-active;
         opacity: 1.0;
@@ -224,4 +217,3 @@
 
   xdg.configFile."waybar/config.jsonc".source = ./waybar/config.jsonc;
 }
-
