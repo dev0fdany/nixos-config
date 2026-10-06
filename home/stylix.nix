@@ -7,7 +7,7 @@
     # Base image used to derive colors automatically when no base16Scheme is set
     image = ./default-wallpaper/default.png; # Path to a default image in your repo/home
     # Optional: If you prefer a specific base16 color scheme instead of auto-generated ones
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+    #base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 
     autoEnable = true;
     

@@ -5,6 +5,7 @@
     ./stylix.nix
     ./waybar.nix
     ./config/kitty.nix
+    ./config/fuzzel.nix
     ./mako/mako.nix
     ./shell.nix
     ./starship.nix
