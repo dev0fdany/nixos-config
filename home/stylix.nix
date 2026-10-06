@@ -28,8 +28,8 @@
         name = "Noto Sans";
       };
       monospace = {
-        package = pkgs.jetbrains-mono;
-        name = "JetBrains Mono";
+        package = pkgs.nerd-fonts.jetbrains-mono;
+        name = "JetBrainsMono Nerd Font";
       };
       emoji = {
         package = pkgs.emptyDirectory; 

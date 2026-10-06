@@ -23,20 +23,10 @@
     imv
     lua
     gh # github
-
+    
+    # fonts
     noto-fonts
-    jetbrains-mono
+    nerd-fonts.jetbrains-mono
   ];
-
-  # Font configuration
-  fonts.fontconfig = {
-    enable = true;
-    defaultFonts = {
-      monospace = [ "JetBrains Mono" ];
-      sansSerif = [ "Noto Serif " ];
-      serif = [ "Noto Sans" ];
-      emoji = [ "Apple Color Emoji" ];
-    };
-  };
 }
 
