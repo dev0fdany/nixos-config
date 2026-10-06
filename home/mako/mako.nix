@@ -4,9 +4,8 @@
   services.mako = {
     enable = true;
     
-    defaultTimeout = 3500;
-    # Modern Home Manager settings syntax
     settings = {
+      default-timeout = 3500;
       ignore-timeout = false;
       
       anchor = "top-right";
