@@ -47,9 +47,9 @@
       };
     };
 
-    # Automatically target installed Home Manager applications
     targets = {
       waybar.enable = true;
+      firefox.enable = true;
       mako.enable = true;
       fuzzel.enable = true;
       kitty.enable = true;

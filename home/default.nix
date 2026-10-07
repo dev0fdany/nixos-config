@@ -8,6 +8,7 @@
     ./config/fuzzel.nix
     ./config/btop.nix
     ./config/cava.nix
+    ./config/browser.nix
     ./mako/mako.nix
     ./shell.nix
     ./starship.nix
