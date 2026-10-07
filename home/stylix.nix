@@ -48,6 +48,11 @@
     };
 
     targets = {
+      zen-browser = {
+        enable = true;
+        profileNames = [ "default" ];
+      };
+
       waybar.enable = true;
       firefox.enable = true;
       mako.enable = true;

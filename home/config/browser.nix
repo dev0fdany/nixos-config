@@ -9,7 +9,7 @@
   };
 
   home.packages = [
-    inputs.helium.packages.${pkgs.system}.default
+    inputs.helium.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
   xdg.configFile."helium-flags.conf".text = ''
