@@ -28,9 +28,5 @@
       }
     '';
   };
-
-  home.sessionPath = [
-  "$HOME/.config/scripts"
-];
 }
 

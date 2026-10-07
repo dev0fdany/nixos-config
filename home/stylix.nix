@@ -5,7 +5,7 @@
     polarity = "dark"; # "dark" or "light"
 
     # Base image used to derive colors automatically when no base16Scheme is set
-    image = ./default-wallpaper/ikuyo-mocha.png; # Path to a default image in your repo/home
+    image = ./wallpaper-stylix/ikuyo-mocha.png; # Path to a default image in your repo/home
     # Optional: If you prefer a specific base16 color scheme instead of auto-generated ones
     #base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 
