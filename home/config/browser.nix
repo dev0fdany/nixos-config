@@ -2,21 +2,21 @@
 {
   imports = [
     inputs.zen-browser.homeModules.twilight
-    inputs.helium.homeModules.default 
   ];
 
   programs.zen-browser = {
     enable = true;
   };
 
-  programs.helium = {
-    enable = true;
-    flags = [
-      "--gtk-version=4"
-      "--enable-features=WebUIDarkMode"
-      "--force-dark-mode"
-      "--ozone-platform-hint=auto"
-    ];
-  };
+  home.packages = [
+    inputs.helium.packages.${pkgs.system}.default
+  ];
+
+  xdg.configFile."helium-flags.conf".text = ''
+    --gtk-version=4
+    --enable-features=WebUIDarkMode
+    --force-dark-mode
+    --ozone-platform-hint=auto
+  '';
 }
 
