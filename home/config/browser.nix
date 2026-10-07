@@ -6,6 +6,12 @@
 
   programs.zen-browser = {
     enable = true;
+    profiles."Default Profile" = {
+      id = 0;
+      name = "Default Profile";
+      isDefault = true;
+      path = "49hadlx8.Default Profile";
+    };
   };
 
   home.packages = [
