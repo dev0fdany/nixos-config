@@ -2,7 +2,7 @@
 {
   imports = [
     inputs.zen-browser.homeModules.twilight
-    inputs.helium.homeManagerModules.default 
+    inputs.helium.homeModules.default 
   ];
 
   programs.zen-browser = {
