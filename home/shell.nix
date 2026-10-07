@@ -14,7 +14,7 @@
       nrs = "sudo nixos-rebuild switch --flake /etc/nixos#nixos";
     };
 
-    initContent = ''
+    initExtra = ''
       function custom_nix_develop() {
         if [[ "$1" == "py" ]]; then
           command nix develop /etc/nixos#py
