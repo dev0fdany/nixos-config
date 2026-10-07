@@ -46,7 +46,7 @@ if [ -z "$RAW_INPUT" ]; then
     exit 1
 fi
 
-SELECTED=$(printf "%b" "$RAW_INPUT" | fuzzel --dmenu --prompt="   Wallpaper ❯ ")
+SELECTED=$(printf "%b" "$RAW_INPUT" | fuzzel --dmenu --prompt="󰸉 Wallpaper ❯ "")
 
 if [ -z "$SELECTED" ]; then
     exit 0
