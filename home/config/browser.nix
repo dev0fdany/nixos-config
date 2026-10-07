@@ -1,21 +1,9 @@
-# /etc/nixos/home/config/browser.nix
 { inputs, pkgs, ... }:
 {
-  imports = [
-    inputs.zen-browser.homeModules.twilight
-  ];
-
-  programs.zen-browser = {
-    enable = true;
-    profiles."default" = {
-      id = 0;
-      name = "Default Profile";
-      isDefault = true;
-      path = "49hadlx8.Default Profile";
-    };
-  };
+  imports = [ ];
 
   home.packages = [
+    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.helium.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
