@@ -6,7 +6,7 @@
 
   programs.zen-browser = {
     enable = true;
-    profiles."Default Profile" = {
+    profiles."default" = {
       id = 0;
       name = "Default Profile";
       isDefault = true;
