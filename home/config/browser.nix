@@ -1,11 +1,10 @@
 { inputs, pkgs, ... }:
 {
-  imports = [
-    inputs.zen-browser.homeModules.twilight
-  ];
+  imports = [ ];
 
   programs.zen-browser = {
     enable = true;
+    package = inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default;
     profiles."default" = {
       id = 0;
       name = "Default Profile";
