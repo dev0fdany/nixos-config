@@ -6,7 +6,6 @@
   users.defaultUserShell = pkgs.zsh;
   users.users.dwtop.ignoreShellProgramCheck = true;
   users.users.root.ignoreShellProgramCheck = true;
-  programs.adb.enable = true;
   programs.dconf.enable = true;
   programs.dconf.profiles.user.databases = [{
   settings = {
