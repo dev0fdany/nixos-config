@@ -2,7 +2,7 @@
 {
   users.users.dwtop = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "video" "networkmanager"];
+    extraGroups = [ "wheel" "video" "networkmanager" "adb" ];
     packages = with pkgs; [
      inputs.zen-browser.packages.${system}.default
      inputs.helium.packages.${system}.default
