@@ -24,6 +24,9 @@
     lua
     starship
     gh # github
+    scrcpy
+    patchutils
+    android-tools
     
     # fonts
     noto-fonts
