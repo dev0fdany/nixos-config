@@ -8,6 +8,6 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
-  nix.settings.trusted-users = [ "root" "dwtop" ];
+  nix.settings.trusted-users = [ "root" "dev0fdany" ];
 
 }

@@ -8,7 +8,7 @@
     enable = true;
     settings = {
       user = {
-        name = "dwtop"; # Replace with your actual name
+        name = "dev0fdany"; # Replace with your actual name
         email = "danyal2007.online@gmail.com"; # Replace with your actual email
       };
       

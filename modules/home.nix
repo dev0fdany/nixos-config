@@ -8,7 +8,7 @@
     useUserPackages = true;
     extraSpecialArgs = { inherit inputs; };
     users = {
-      dwtop = {
+      dev0fdany = {
         imports = [
           ../home/default.nix
           

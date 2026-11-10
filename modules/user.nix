@@ -1,6 +1,6 @@
 { config, pkgs, inputs, ... }:
 {
-  users.users.dwtop = {
+  users.users.dev0fdany = {
     isNormalUser = true;
     extraGroups = [ "wheel" "video" "networkmanager"];
     packages = with pkgs; [

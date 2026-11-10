@@ -16,8 +16,8 @@
   ];
 
   home = {
-    username = "dwtop";
-    homeDirectory = "/home/dwtop";
+    username = "dev0fdany";
+    homeDirectory = "/home/dev0fdany";
     stateVersion = "26.11";
   };
   
